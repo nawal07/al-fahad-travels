@@ -3,12 +3,12 @@ import type { SEOContent } from "@/types/content";
 export const pagesSEO = {
   about: {
     title: {
-      en: "About Zover | Premium Saudi Travel Since 2004",
-      ar: "من نحن | زوفر للسفر والسياحة منذ 2004",
+      en: "About Al-Fahad Travels | Premium Saudi Travel",
+      ar: "من نحن | الفهد للسفر والسياحة",
     },
     description: {
-      en: "Discover Zover International Travel — leading tourism in Saudi Arabia with innovation, quality, and Vision 2030 alignment.",
-      ar: "تعرف على زوفر العالمية للسفر والسياحة — رائدة في المملكة بالابتكار والجودة ومواكبة رؤية 2030.",
+      en: "Discover Al-Fahad Travels — leading tourism in Saudi Arabia with innovation, quality, and Vision 2030 alignment.",
+      ar: "تعرف على الفهد للسفر والسياحة — رائدة في المملكة بالابتكار والجودة ومواكبة رؤية 2030.",
     },
   },
   services: {
@@ -23,8 +23,8 @@ export const pagesSEO = {
   },
   partners: {
     title: {
-      en: "Our Partners & Clients | Zover",
-      ar: "شركاؤنا وعملاؤنا | زوفر",
+      en: "Our Partners & Clients | Al-Fahad Travels",
+      ar: "شركاؤنا وعملاؤنا | الفهد للسفر والسياحة",
     },
     description: {
       en: "Trusted by leading organizations across Saudi Arabia and the region.",
@@ -33,22 +33,22 @@ export const pagesSEO = {
   },
   contact: {
     title: {
-      en: "Contact Zover | Riyadh Travel Experts",
-      ar: "اتصل بنا | زوفر الرياض",
+      en: "Contact Al-Fahad Travels | Riyadh Travel Experts",
+      ar: "اتصل بنا | الفهد للسفر والسياحة الرياض",
     },
     description: {
-      en: "Reach Zover in Riyadh for bespoke travel planning. Email, phone, and WhatsApp support.",
-      ar: "تواصل مع زوفر في الرياض لتخطيط رحلاتك. بريد إلكتروني، هاتف وواتساب.",
+      en: "Reach Al-Fahad Travels in Riyadh for bespoke travel planning. Email, phone, and WhatsApp support.",
+      ar: "تواصل مع الفهد للسفر والسياحة في الرياض لتخطيط رحلاتك. بريد إلكتروني، هاتف وواتساب.",
     },
   },
   blog: {
     title: {
-      en: "Travel Insights | Zover Blog",
-      ar: "رؤى السفر | مدونة زوفر",
+      en: "Travel Insights | Al-Fahad Travels Blog",
+      ar: "رؤى السفر | مدونة الفهد للسفر والسياحة",
     },
     description: {
-      en: "Destination guides, travel tips, and luxury tourism insights from Zover.",
-      ar: "أدلة الوجهات ونصائح السفر ورؤى السياحة الفاخرة من زوفر.",
+      en: "Destination guides, travel tips, and luxury tourism insights from Al-Fahad Travels.",
+      ar: "أدلة الوجهات ونصائح السفر ورؤى السياحة الفاخرة من الفهد للسفر والسياحة.",
     },
     noIndex: true,
   },

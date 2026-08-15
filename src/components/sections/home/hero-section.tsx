@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { MessageCircle } from "lucide-react";
 import { m } from "framer-motion";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { AnimatedCounter } from "@/components/animations/animated-counter";
 import { LinkButton } from "@/components/ui/link-button";
 import { ROUTES } from "@/constants/routes";
@@ -12,9 +12,16 @@ import { IMAGES } from "@/constants/images";
 import { heroStats } from "@/data/home-content";
 import { getWhatsAppUrl } from "@/lib/rtl";
 
+const WA_MESSAGE = {
+  en: "Hello! I'm interested in Al-Fahad Travels services. I'd like to enquire about your travel packages and itineraries. Could you please assist me?",
+  ar: "مرحباً، أود الاستفسار عن خدمات وباقات الفهد للسفر والسياحة. هل يمكنكم مساعدتي في التخطيط لرحلتي؟",
+};
+
 export function HeroSection() {
   const t = useTranslations("home.hero");
   const common = useTranslations("common");
+  const locale = useLocale();
+  const waMessage = locale === "ar" ? WA_MESSAGE.ar : WA_MESSAGE.en;
 
   return (
     <section
@@ -99,7 +106,7 @@ export function HeroSection() {
             {t("plan")}
           </LinkButton>
           <a
-            href={getWhatsAppUrl(SITE_CONFIG.contact.whatsapp)}
+            href={getWhatsAppUrl(SITE_CONFIG.contact.whatsapp, waMessage)}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-pill-wa inline-flex h-12 items-center gap-2 rounded-full px-6 text-sm font-semibold tracking-wide text-pearl transition-all touch-manipulation"

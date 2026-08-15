@@ -1,4 +1,4 @@
-import { getLocale, getTranslations } from "next-intl/server";
+﻿import { getTranslations } from "next-intl/server";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { SectionWrapper } from "@/components/layout/section-wrapper";
 import { SectionHeading } from "@/components/sections/section-heading";
@@ -22,9 +22,9 @@ function StarRating({ rating }: { rating: number }) {
   );
 }
 
-export async function TestimonialsSection() {
-  const locale = (await getLocale()) as Locale;
-  const t = await getTranslations("home.testimonials");
+export async function TestimonialsSection({ locale }: { locale: Locale }) {
+
+  const t = await getTranslations({ locale, namespace: "home.testimonials" });
 
   return (
     <SectionWrapper id="testimonials" variant="gradient">

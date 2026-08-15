@@ -1,4 +1,4 @@
-import { getLocale, getTranslations } from "next-intl/server";
+﻿import { getTranslations } from "next-intl/server";
 import {
   Car,
   Compass,
@@ -28,9 +28,9 @@ const iconMap: Record<HomeService["icon"], LucideIcon> = {
   crown: Crown,
 };
 
-export async function ServicesPageContent() {
-  const locale = (await getLocale()) as Locale;
-  const t = await getTranslations("pages.services");
+export async function ServicesPageContent({ locale }: { locale: Locale }) {
+
+  const t = await getTranslations({ locale, namespace: "pages.services" });
 
   return (
     <>

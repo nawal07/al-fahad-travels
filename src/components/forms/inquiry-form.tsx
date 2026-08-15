@@ -42,7 +42,7 @@ export function InquiryForm() {
     const message = (data.get("message") as string) || "";
 
     const lines = [
-      "Hello Zover International Travel & Tourism! 👋",
+      "Hello Al-Fahad Travels! 👋",
       "",
       "✈️ *Travel Enquiry*",
       "",

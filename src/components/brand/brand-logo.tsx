@@ -1,13 +1,10 @@
-import Image from "next/image";
-import { BRAND } from "@/constants/brand";
 import { cn } from "@/lib/utils";
 
 type BrandLogoProps = {
   variant?: "full" | "icon";
   className?: string;
-  /** Light pill background for dark headers */
+  /** Renders on a dark background — swaps the wordmark to a light tone */
   onDark?: boolean;
-  priority?: boolean;
   size?: "default" | "sm";
 };
 
@@ -15,40 +12,48 @@ export function BrandLogo({
   variant = "full",
   className,
   onDark = false,
-  priority = false,
   size = "default",
 }: BrandLogoProps) {
-  const isIcon = variant === "icon";
-  const width = isIcon ? BRAND.logo.iconWidth : BRAND.logo.width;
-  const height = isIcon ? BRAND.logo.iconHeight : BRAND.logo.height;
-
-  const displayMaxHeight = !isIcon && size === "sm" ? 56 : height;
-  const displayMaxWidth = !isIcon && size === "sm" ? 80 : width;
+  if (variant === "icon") {
+    return (
+      <span
+        className={cn(
+          "relative inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-gold to-purple font-display text-base font-bold tracking-tight text-pearl",
+          className,
+        )}
+        aria-hidden
+      >
+        AF
+      </span>
+    );
+  }
 
   return (
     <span
       className={cn(
-        "relative inline-flex shrink-0 items-center",
-        onDark && "brightness-110",
+        "relative inline-flex shrink-0 flex-col leading-none",
         className,
       )}
     >
-      <Image
-        src={BRAND.logo.src}
-        alt="Zover Travel & Tourism"
-        width={width}
-        height={height}
+      <span
         className={cn(
-          "h-auto w-auto max-w-full object-contain object-start transition-all duration-300",
-          isIcon
-            ? "max-h-14 max-w-20"
-            : size === "sm"
-              ? "max-h-14 max-w-20"
-              : "max-h-32 max-w-45.5",
+          "font-display font-bold tracking-tight transition-colors duration-300",
+          size === "sm" ? "text-xl" : "text-2xl lg:text-3xl",
+          onDark ? "text-pearl" : "text-navy",
         )}
-        style={{ width: "auto", height: "auto", maxWidth: displayMaxWidth, maxHeight: displayMaxHeight }}
-        priority={priority}
-      />
+      >
+        Al&#8209;Fahad
+      </span>
+      <span
+        className={cn(
+          "mt-0.5 font-heading uppercase text-gold",
+          size === "sm"
+            ? "text-[0.55rem] tracking-[0.35em]"
+            : "text-[0.62rem] tracking-[0.4em]",
+        )}
+      >
+        Travels
+      </span>
     </span>
   );
 }

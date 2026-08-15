@@ -1,6 +1,6 @@
-# Zover — Premium Travel & Tourism (Frontend Demo)
+# Al-Fahad Travels — Premium Travel & Tourism (Frontend Demo)
 
-Luxury bilingual (EN/AR) tourism website for **Zover International Travel & Tourism**, built with Next.js App Router, TypeScript, Tailwind CSS v4, Framer Motion, and next-intl.
+Luxury bilingual (EN/AR) tourism website for **Al-Fahad Travels**, built with Next.js App Router, TypeScript, Tailwind CSS v4, Framer Motion, and next-intl.
 
 ## Phase 5 (current)
 
@@ -49,7 +49,7 @@ npm run start
 
 ## Brand assets
 
-Logo: `public/brand/zover-logo.png`. Partner placeholders: `public/partners/` (see `README.md` there).
+Logo: text-based wordmark (`src/components/brand/brand-logo.tsx`) — swap for a real logo file when available. Home hero photo: `public/brand/home.jpg`. Partner placeholders: `public/partners/` (see `README.md` there).
 
 ## Next phases
 

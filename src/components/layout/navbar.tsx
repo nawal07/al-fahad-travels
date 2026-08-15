@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { AnimatePresence, m } from "framer-motion";
 import { Menu, X } from "lucide-react";
@@ -8,7 +8,8 @@ import { BrandLogo } from "@/components/brand/brand-logo";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { ROUTES } from "@/constants/routes";
 import type { Locale } from "@/constants/site";
-import { Link, usePathname } from "@/i18n/navigation";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useScrolled } from "@/hooks/use-scrolled";
 import { MAIN_NAV } from "@/lib/navigation";
 import { cn } from "@/lib/utils";
@@ -16,7 +17,8 @@ import { cn } from "@/lib/utils";
 export function Navbar() {
   const t = useTranslations("common");
   const locale = useLocale() as Locale;
-  const pathname = usePathname();
+  const rawPathname = usePathname();
+  const pathname = rawPathname.replace(new RegExp(`^/${locale}`), "") || "/";
   const scrolled = useScrolled();
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -87,13 +89,13 @@ export function Navbar() {
           aria-label={t("a11y.mainNav")}
         >
           <Link
-            href={ROUTES.home}
+            href={`/${locale}`}
             className="group shrink-0 transition-all duration-500 hover:opacity-90"
             aria-label={t("brandName")}
           >
-            <BrandLogo variant="full" priority size={glass ? "sm" : "default"} className="hidden lg:block" />
-            <BrandLogo variant="full" priority size="sm" className="hidden sm:block lg:hidden" />
-            <BrandLogo variant="icon" priority className="sm:hidden" />
+            <BrandLogo variant="full" onDark={!glass} size={glass ? "sm" : "default"} className="hidden lg:block" />
+            <BrandLogo variant="full" onDark={!glass} size="sm" className="hidden sm:block lg:hidden" />
+            <BrandLogo variant="icon" className="sm:hidden" />
           </Link>
 
           <ul className="hidden items-center gap-8 lg:flex xl:gap-10">
@@ -105,7 +107,7 @@ export function Navbar() {
               return (
                 <li key={item.key}>
                   <Link
-                    href={item.href}
+                    href={item.href === "/" ? `/${locale}` : `/${locale}${item.href}`}
                     className={cn(
                       "nav-link-underline relative text-[0.85rem] font-medium uppercase tracking-[0.08em] transition-colors duration-300",
                       glass
@@ -121,8 +123,8 @@ export function Navbar() {
             })}
             <li>
               <Link
-                href={ROUTES.contact}
-                className="inline-flex rounded-full bg-gold px-5 py-2.5 text-[0.85rem] font-semibold uppercase tracking-[0.04em] text-pearl transition-all hover:-translate-y-px hover:bg-[#ff8c42] hover:shadow-[0_8px_24px_rgba(249,122,48,0.4)]"
+                href={`/${locale}${ROUTES.contact}`}
+                className="inline-flex rounded-full bg-gold px-5 py-2.5 text-[0.85rem] font-semibold uppercase tracking-[0.04em] text-pearl transition-all hover:-translate-y-px hover:bg-gold-muted hover:shadow-[0_8px_24px_rgba(201,144,47,0.4)]"
               >
                 {t("cta.contact")}
               </Link>
@@ -216,7 +218,7 @@ export function Navbar() {
                       transition={{ delay: 0.05 + i * 0.05 }}
                     >
                       <Link
-                        href={item.href}
+                        href={item.href === "/" ? `/${locale}` : `/${locale}${item.href}`}
                         className={cn(
                           "block min-h-12 rounded-lg px-4 py-3.5 text-lg font-medium uppercase tracking-wide transition-colors active:bg-pearl/5",
                           active
@@ -234,9 +236,9 @@ export function Navbar() {
 
               <div className="space-y-4 border-t border-pearl/10 px-5 py-5 pb-[max(1.25rem,env(safe-area-inset-bottom,0px))]">
                 <Link
-                  href={ROUTES.contact}
+                  href={`/${locale}${ROUTES.contact}`}
                   onClick={() => setMobileOpen(false)}
-                  className="flex h-12 w-full items-center justify-center rounded-full bg-gold text-sm font-semibold uppercase tracking-wide text-pearl transition-all hover:bg-[#ff8c42]"
+                  className="flex h-12 w-full items-center justify-center rounded-full bg-gold text-sm font-semibold uppercase tracking-wide text-pearl transition-all hover:bg-gold-muted"
                 >
                   {t("cta.contact")}
                 </Link>

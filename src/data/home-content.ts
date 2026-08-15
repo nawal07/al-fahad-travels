@@ -27,7 +27,7 @@ export type HomeStrength = {
 
 export const heroStats = [
   { id: "destinations", value: 120, suffix: "+", labelKey: "statDestinations" as const },
-  { id: "years", value: 20, suffix: "", labelKey: "statYears" as const },
+  { id: "years", value: 24, suffix: "/7", labelKey: "statYears" as const },
   { id: "travelers", value: 15, suffix: "K+", labelKey: "statTravelers" as const },
   { id: "partners", value: 50, suffix: "+", labelKey: "statPartners" as const },
 ] as const;
@@ -144,8 +144,8 @@ export const homeStrengths: HomeStrength[] = [
     emoji: "🎯",
     title: { en: "Deep Expertise", ar: "خبرة عميقة" },
     description: {
-      en: "20+ years of specialized knowledge delivering innovative, tailored solutions for every traveler.",
-      ar: "أكثر من 20 عاماً من المعرفة المتخصصة وحلول مبتكرة لكل مسافر.",
+      en: "Specialized knowledge delivering innovative, tailored solutions for every traveler.",
+      ar: "معرفة متخصصة وحلول مبتكرة لكل مسافر.",
     },
   },
   {
@@ -200,8 +200,8 @@ export const testimonials = [
     id: "1",
     rating: 5,
     quote: {
-      en: "Zover handled every detail of our corporate retreat flawlessly — from flights to VIP ground transport.",
-      ar: "تولت زوفر كل تفاصيل ملتقى شركتنا بإتقان — من الطيران إلى النقل الفاخر.",
+      en: "Al-Fahad Travels handled every detail of our corporate retreat flawlessly — from flights to VIP ground transport.",
+      ar: "تولت الفهد للسفر والسياحة كل تفاصيل ملتقى شركتنا بإتقان — من الطيران إلى النقل الفاخر.",
     },
     author: { en: "Corporate Client", ar: "عميل شركات" },
     role: { en: "Riyadh", ar: "الرياض" },
@@ -220,8 +220,8 @@ export const testimonials = [
     id: "3",
     rating: 5,
     quote: {
-      en: "Twenty years of trust. Zover remains our family's travel partner.",
-      ar: "عشرون عاماً من الثقة. زوفر لا تزال شريكنا في السفر.",
+      en: "A trusted name, time and again. Al-Fahad Travels remains our family's travel partner.",
+      ar: "اسم موثوق، مرة بعد أخرى. الفهد للسفر والسياحة لا تزال شريكنا في السفر.",
     },
     author: { en: "Family Traveler", ar: "عائلة مسافرة" },
     role: { en: "Dammam", ar: "الدمام" },

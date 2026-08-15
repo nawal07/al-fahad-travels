@@ -1,4 +1,4 @@
-import { getLocale, getTranslations } from "next-intl/server";
+﻿import { getTranslations } from "next-intl/server";
 import { MotionWrapper } from "@/components/animations/motion-wrapper";
 import { PageHeader } from "@/components/layout/page-header";
 import { SectionWrapper } from "@/components/layout/section-wrapper";
@@ -18,9 +18,9 @@ import { coreValues } from "@/data/site-content";
 import { pickLocalized } from "@/lib/localized";
 import { cn } from "@/lib/utils";
 
-export async function AboutPageContent() {
-  const locale = (await getLocale()) as Locale;
-  const t = await getTranslations("pages.about");
+export async function AboutPageContent({ locale }: { locale: Locale }) {
+
+  const t = await getTranslations({ locale, namespace: "pages.about" });
 
   return (
     <>

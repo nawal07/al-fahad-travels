@@ -1,4 +1,4 @@
-import { setRequestLocale } from "next-intl/server";
+﻿import { setRequestLocale } from "next-intl/server";
 import { PartnersPageContent } from "@/components/pages/partners-page";
 import type { Locale } from "@/constants/site";
 import { pagesSEO } from "@/data/pages-seo";
@@ -18,5 +18,5 @@ export async function generateMetadata({ params }: PageProps) {
 export default async function PartnersPage({ params }: PageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
-  return <PartnersPageContent />;
+  return <PartnersPageContent locale={locale as Locale} />;
 }

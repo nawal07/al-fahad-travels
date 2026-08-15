@@ -10,9 +10,4 @@ export const ROUTES = {
 
 export type RouteKey = keyof typeof ROUTES;
 
-export const NAV_LINKS: RouteKey[] = [
-  "home",
-  "about",
-  "services",
-  "partners",
-];
+export const NAV_LINKS: RouteKey[] = ["home", "about", "services", "partners"];

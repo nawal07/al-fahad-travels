@@ -1,6 +1,8 @@
+﻿"use client";
 import { cva, type VariantProps } from "class-variance-authority";
 import type { ComponentProps } from "react";
-import { Link } from "@/i18n/navigation";
+import Link from "next/link";
+import { useLocale } from "next-intl";
 import { cn } from "@/lib/utils";
 
 const linkButtonVariants = cva(
@@ -35,10 +37,18 @@ export function LinkButton({
   className,
   variant,
   size,
+  href = "/",
   ...props
 }: LinkButtonProps) {
+  const locale = useLocale();
+  const prefixedHref =
+    typeof href === "string" && !href.startsWith("http") && !href.startsWith("//")
+      ? `/${locale}${href}`
+      : href;
+
   return (
     <Link
+      href={prefixedHref}
       className={cn(
         linkButtonVariants({ variant, size }),
         "touch-manipulation",

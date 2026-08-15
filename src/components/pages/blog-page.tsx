@@ -1,12 +1,13 @@
-import { getTranslations } from "next-intl/server";
+﻿import { getTranslations } from "next-intl/server";
+import type { Locale } from "@/constants/site";
 import { MotionWrapper } from "@/components/animations/motion-wrapper";
 import { PageHeader } from "@/components/layout/page-header";
 import { SectionWrapper } from "@/components/layout/section-wrapper";
 import { LinkButton } from "@/components/ui/link-button";
 import { ROUTES } from "@/constants/routes";
 
-export async function BlogPageContent() {
-  const t = await getTranslations("pages.blog");
+export async function BlogPageContent({ locale }: { locale: Locale }) {
+  const t = await getTranslations({ locale, namespace: "pages.blog" });
 
   return (
     <>

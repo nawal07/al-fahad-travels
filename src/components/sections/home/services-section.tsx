@@ -1,4 +1,4 @@
-import { getLocale, getTranslations } from "next-intl/server";
+﻿import { getTranslations } from "next-intl/server";
 import { ServiceCard } from "@/components/cards/service-card";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { SectionWrapper } from "@/components/layout/section-wrapper";
@@ -8,9 +8,9 @@ import { ROUTES } from "@/constants/routes";
 import type { Locale } from "@/constants/site";
 import { homeServices } from "@/data/home-content";
 
-export async function ServicesSection() {
-  const locale = (await getLocale()) as Locale;
-  const t = await getTranslations("home.services");
+export async function ServicesSection({ locale }: { locale: Locale }) {
+
+  const t = await getTranslations({ locale, namespace: "home.services" });
 
   return (
     <SectionWrapper id="services" variant="gradient">

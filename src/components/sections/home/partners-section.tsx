@@ -1,11 +1,12 @@
-import { getTranslations } from "next-intl/server";
+﻿import { getTranslations } from "next-intl/server";
+import type { Locale } from "@/constants/site";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { SectionWrapper } from "@/components/layout/section-wrapper";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { partnerPlaceholders } from "@/data/home-content";
 
-export async function PartnersSection() {
-  const t = await getTranslations("home.partners");
+export async function PartnersSection({ locale }: { locale: Locale }) {
+  const t = await getTranslations({ locale, namespace: "home.partners" });
 
   return (
     <SectionWrapper id="partners" className="!py-20">

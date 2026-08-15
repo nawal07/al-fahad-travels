@@ -1,4 +1,4 @@
-import { getLocale, getTranslations } from "next-intl/server";
+﻿import { getTranslations } from "next-intl/server";
 import { MotionWrapper } from "@/components/animations/motion-wrapper";
 import { PartnerLogoCard } from "@/components/cards/partner-logo-card";
 import { PageHeader } from "@/components/layout/page-header";
@@ -9,9 +9,9 @@ import { ROUTES } from "@/constants/routes";
 import type { Locale } from "@/constants/site";
 import { partnerCategories, partnerSlots } from "@/data/partners-content";
 
-export async function PartnersPageContent() {
-  const locale = (await getLocale()) as Locale;
-  const t = await getTranslations("pages.partners");
+export async function PartnersPageContent({ locale }: { locale: Locale }) {
+
+  const t = await getTranslations({ locale, namespace: "pages.partners" });
 
   const categories = ["airline", "hotel", "government", "corporate"] as const;
 

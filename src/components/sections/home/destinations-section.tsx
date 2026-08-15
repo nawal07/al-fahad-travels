@@ -1,4 +1,4 @@
-import { getLocale, getTranslations } from "next-intl/server";
+﻿import { getTranslations, setRequestLocale } from "next-intl/server";
 import { DestinationCard } from "@/components/cards/destination-card";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { SectionWrapper } from "@/components/layout/section-wrapper";
@@ -6,11 +6,12 @@ import { SectionHeading } from "@/components/sections/section-heading";
 import { ROUTES } from "@/constants/routes";
 import type { Locale } from "@/constants/site";
 import { featuredDestinations } from "@/data/home-content";
-import { Link } from "@/i18n/navigation";
+import Link from "next/link";
 
-export async function DestinationsSection() {
-  const locale = (await getLocale()) as Locale;
-  const t = await getTranslations("home.destinations");
+export async function DestinationsSection({ locale }: { locale: Locale }) {
+  setRequestLocale(locale);
+
+  const t = await getTranslations({ locale, namespace: "home.destinations" });
 
   return (
     <SectionWrapper id="destinations">
@@ -23,7 +24,7 @@ export async function DestinationsSection() {
         />
         <ScrollReveal>
           <Link
-            href={ROUTES.services}
+            href={`/${locale}${ROUTES.services}`}
             className="inline-flex items-center gap-1 text-[0.82rem] tracking-[0.08em] text-pearl/50 transition-colors hover:border-b hover:border-gold hover:text-gold"
           >
             {t("viewAll")} →

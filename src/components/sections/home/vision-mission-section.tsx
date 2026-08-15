@@ -1,4 +1,4 @@
-import { getLocale, getTranslations } from "next-intl/server";
+﻿import { getTranslations } from "next-intl/server";
 import { MotionWrapper } from "@/components/animations/motion-wrapper";
 import { SectionWrapper } from "@/components/layout/section-wrapper";
 import { SectionHeading } from "@/components/sections/section-heading";
@@ -8,9 +8,9 @@ import type { Locale } from "@/constants/site";
 import { pickLocalized } from "@/lib/localized";
 import { cn } from "@/lib/utils";
 
-export async function VisionMissionSection() {
-  const locale = (await getLocale()) as Locale;
-  const t = await getTranslations("home.vision");
+export async function VisionMissionSection({ locale }: { locale: Locale }) {
+
+  const t = await getTranslations({ locale, namespace: "home.vision" });
 
   return (
     <SectionWrapper variant="sand" id="vision">

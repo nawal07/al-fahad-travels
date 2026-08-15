@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { getLocale, getTranslations } from "next-intl/server";
+﻿import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { SectionWrapper } from "@/components/layout/section-wrapper";
 import { SectionHeading } from "@/components/sections/section-heading";
@@ -8,9 +8,9 @@ import type { Locale } from "@/constants/site";
 import { pickLocalized } from "@/lib/localized";
 import { cn } from "@/lib/utils";
 
-export async function GallerySection() {
-  const locale = (await getLocale()) as Locale;
-  const t = await getTranslations("home.gallery");
+export async function GallerySection({ locale }: { locale: Locale }) {
+
+  const t = await getTranslations({ locale, namespace: "home.gallery" });
 
   return (
     <SectionWrapper id="gallery" className="!py-24">

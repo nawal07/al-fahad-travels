@@ -29,7 +29,7 @@ export function ContactForm() {
     const message = (data.get("message") as string) || "";
 
     const body = [
-      "Hello Zover International Travel & Tourism! 👋",
+      "Hello Al-Fahad Travels! 👋",
       "",
       "📋 *General Enquiry*",
       "",

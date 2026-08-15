@@ -1,4 +1,4 @@
-import { setRequestLocale } from "next-intl/server";
+﻿import { setRequestLocale } from "next-intl/server";
 import { ContactCtaSection } from "@/components/sections/home/contact-cta-section";
 import { DestinationsSection } from "@/components/sections/home/destinations-section";
 import { GallerySection } from "@/components/sections/home/gallery-section";
@@ -31,13 +31,13 @@ export default async function HomePage({ params }: HomePageProps) {
   return (
     <main>
       <HeroSection />
-      <DestinationsSection />
-      <ServicesSection />
-      <WhyChooseSection />
-      <PartnersSection />
-      <TestimonialsSection />
-      <GallerySection />
-      <ContactCtaSection />
+      <DestinationsSection locale={locale as Locale} />
+      <ServicesSection locale={locale as Locale} />
+      <WhyChooseSection locale={locale as Locale} />
+      <PartnersSection locale={locale as Locale} />
+      <TestimonialsSection locale={locale as Locale} />
+      <GallerySection locale={locale as Locale} />
+      <ContactCtaSection locale={locale as Locale} />
     </main>
   );
 }

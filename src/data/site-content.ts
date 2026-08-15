@@ -3,18 +3,18 @@ import type { LocalizedString, SEOContent } from "@/types/content";
 /** CMS-ready content objects — swap with Sanity queries in Phase 4+ */
 export const homeSEO: SEOContent = {
   title: {
-    en: "Zover International Travel & Tourism | Premium Saudi Travel",
-    ar: "زوفر العالمية للسفر والسياحة | سفر فاخر في السعودية",
+    en: "Al-Fahad Travels | Premium Saudi Travel",
+    ar: "الفهد للسفر والسياحة | سفر فاخر في السعودية",
   },
   description: {
-    en: "Gateway to extraordinary travel since 2004. Flights, luxury accommodation, bespoke tours, VIP services, and Vision 2030-aligned experiences.",
-    ar: "بوابتكم لتجارب سفر استثنائية منذ 2004. تذاكر طيران، إقامة فاخرة، برامج سياحية مخصصة، خدمات VIP، وتجارب متوافقة مع رؤية 2030.",
+    en: "Gateway to extraordinary travel. Flights, luxury accommodation, bespoke tours, VIP services, and Vision 2030-aligned experiences.",
+    ar: "بوابتكم لتجارب سفر استثنائية. تذاكر طيران، إقامة فاخرة، برامج سياحية مخصصة، خدمات VIP، وتجارب متوافقة مع رؤية 2030.",
   },
 };
 
 export const brandStory: LocalizedString = {
-  en: "In a world brimming with opportunities, Zover International Travel and Tourism was established in 2004 to be your gateway to extraordinary travel experiences across Saudi Arabia and the region.",
-  ar: "في عالم مليء بالفرص والاكتشافات، تأسست شركة زوفر العالمية للسفر والسياحة عام 2004 لتكون نافذتكم إلى تجارب سفر استثنائية في المملكة والمنطقة.",
+  en: "In a world brimming with opportunities, Al-Fahad Travels was established to be your gateway to extraordinary travel experiences across Saudi Arabia and the region.",
+  ar: "في عالم مليء بالفرص والاكتشافات، تأسست شركة الفهد للسفر والسياحة لتكون نافذتكم إلى تجارب سفر استثنائية في المملكة والمنطقة.",
 };
 
 export const coreValues = [

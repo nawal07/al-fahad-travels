@@ -1,7 +1,8 @@
-"use client";
+﻿"use client";
 
 import { useLocale, useTranslations } from "next-intl";
-import { Link, usePathname } from "@/i18n/navigation";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import type { Locale } from "@/constants/site";
 import { cn } from "@/lib/utils";
 
@@ -16,6 +17,7 @@ export function LanguageSwitcher({
 }: LanguageSwitcherProps) {
   const locale = useLocale() as Locale;
   const pathname = usePathname();
+  const barePathname = pathname.replace(new RegExp(`^/${locale}`), "") || "/";
   const t = useTranslations("common.language");
   const targetLocale: Locale = locale === "en" ? "ar" : "en";
 
@@ -28,8 +30,7 @@ export function LanguageSwitcher({
 
   return (
     <Link
-      href={pathname}
-      locale={targetLocale}
+      href={`/${targetLocale}${barePathname}`}
       className={cn(
         "font-lang inline-flex min-h-10 min-w-[3rem] items-center justify-center rounded-full border px-3.5 py-2 text-[0.78rem] tracking-[0.06em] transition-all duration-300 touch-manipulation",
         "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold",

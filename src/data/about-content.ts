@@ -2,27 +2,27 @@ import type { LocalizedString } from "@/types/content";
 
 export const aboutIntro: LocalizedString[] = [
   {
-    en: "In a world brimming with opportunities and discoveries, Zover International Travel and Tourism was established in 2004 to be your gateway to extraordinary travel experiences. With confident strides and an innovative vision, Zover has become one of the leading travel and tourism companies in Saudi Arabia and the region.",
-    ar: "في عالم مليء بالفرص والاكتشافات، تأسست شركة زوفر العالمية للسفر والسياحة عام 2004 لتكون نافذتكم إلى تجارب سفر استثنائية. بخطوات واثقة ورؤية مبتكرة، أصبحت زوفر من أبرز شركات السياحة والسفر في المملكة والمنطقة.",
+    en: "In a world brimming with opportunities and discoveries, Al-Fahad Travels was established to be your gateway to extraordinary travel experiences. With confident strides and an innovative vision, Al-Fahad Travels is building its place among the leading travel and tourism companies in Saudi Arabia and the region.",
+    ar: "في عالم مليء بالفرص والاكتشافات، تأسست شركة الفهد للسفر والسياحة لتكون نافذتكم إلى تجارب سفر استثنائية. بخطوات واثقة ورؤية مبتكرة، تبني الفهد للسفر والسياحة مكانتها بين أبرز شركات السياحة والسفر في المملكة والمنطقة.",
   },
   {
-    en: "At Zover, we believe travel is more than moving from one place to another — it is a rich experience blending inspiration and adventure. From flight bookings to luxury accommodation, guided tours to bespoke journeys, we ensure comfort and exceptional experiences by every measure.",
-    ar: "نؤمن في زوفر أن السفر ليس مجرد انتقال من مكان إلى آخر، بل تجربة ثرية تمزج بين الإلهام والمغامرة. من حجز التذاكر إلى الإقامة الفاخرة، والجولات السياحية إلى الرحلات المصممة خصيصاً، نضمن راحة عملائنا وتجربة استثنائية بكل المقاييس.",
+    en: "At Al-Fahad Travels, we believe travel is more than moving from one place to another — it is a rich experience blending inspiration and adventure. From flight bookings to luxury accommodation, guided tours to bespoke journeys, we ensure comfort and exceptional experiences by every measure.",
+    ar: "نؤمن في الفهد للسفر والسياحة أن السفر ليس مجرد انتقال من مكان إلى آخر، بل تجربة ثرية تمزج بين الإلهام والمغامرة. من حجز التذاكر إلى الإقامة الفاخرة، والجولات السياحية إلى الرحلات المصممة خصيصاً، نضمن راحة عملائنا وتجربة استثنائية بكل المقاييس.",
   },
 ];
 
 export const aboutTeam: LocalizedString = {
-  en: "Our team is the driving force behind Zover's success. With exceptional expertise and passion, they deliver tailored services with meticulous attention to detail. Leveraging advanced digital booking systems, they build lasting client relationships founded on trust, quality, and immediate support throughout every journey.",
-  ar: "فريق العمل هو القوة الدافعة وراء نجاح زوفر. بخبرة وشغف استثنائيين، يقدمون خدمات مخصصة مع عناية بأدق التفاصيل. ومن خلال أحدث أنظمة الحجز الرقمية، يبنون علاقات قوية مع العملاء تقوم على الثقة والجودة والدعم الفوري طوال الرحلة.",
+  en: "Our team is the driving force behind Al-Fahad Travels' success. With exceptional expertise and passion, they deliver tailored services with meticulous attention to detail. Leveraging advanced digital booking systems, they build lasting client relationships founded on trust, quality, and immediate support throughout every journey.",
+  ar: "فريق العمل هو القوة الدافعة وراء نجاح الفهد للسفر والسياحة. بخبرة وشغف استثنائيين، يقدمون خدمات مخصصة مع عناية بأدق التفاصيل. ومن خلال أحدث أنظمة الحجز الرقمية، يبنون علاقات قوية مع العملاء تقوم على الثقة والجودة والدعم الفوري طوال الرحلة.",
 };
 
 export const aboutMilestones = [
   {
-    year: "2004",
+    year: "Est.",
     title: { en: "Founded in Riyadh", ar: "التأسيس في الرياض" },
     description: {
-      en: "Zover International Travel & Tourism opens as your gateway to the world.",
-      ar: "انطلاق زوفر العالمية للسفر والسياحة كبوابة نحو العالم.",
+      en: "Al-Fahad Travels opens as your gateway to the world.",
+      ar: "انطلاق الفهد للسفر والسياحة كبوابة نحو العالم.",
     },
   },
   {

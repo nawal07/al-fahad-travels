@@ -1,4 +1,5 @@
-import { getTranslations } from "next-intl/server";
+﻿import { getTranslations } from "next-intl/server";
+import type { Locale } from "@/constants/site";
 import { MessageCircle } from "lucide-react";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { SectionWrapper } from "@/components/layout/section-wrapper";
@@ -7,8 +8,14 @@ import { ROUTES } from "@/constants/routes";
 import { SITE_CONFIG } from "@/constants/site";
 import { getWhatsAppUrl } from "@/lib/rtl";
 
-export async function ContactCtaSection() {
-  const t = await getTranslations("home.contactCta");
+const WA_MESSAGE = {
+  en: "Hello! I'm interested in Al-Fahad Travels services. I'd like to enquire about your travel packages and itineraries. Could you please assist me?",
+  ar: "مرحباً، أود الاستفسار عن خدمات وباقات الفهد للسفر والسياحة. هل يمكنكم مساعدتي في التخطيط لرحلتي؟",
+};
+
+export async function ContactCtaSection({ locale }: { locale: Locale }) {
+  const t = await getTranslations({ locale, namespace: "home.contactCta" });
+  const waMessage = locale === "ar" ? WA_MESSAGE.ar : WA_MESSAGE.en;
 
   return (
     <SectionWrapper
@@ -20,7 +27,7 @@ export async function ContactCtaSection() {
         className="pointer-events-none absolute inset-0 opacity-100"
         style={{
           background:
-            "radial-gradient(ellipse 60% 50% at 20% 50%, rgba(249,122,48,0.12), transparent), radial-gradient(ellipse 50% 60% at 80% 50%, rgba(251,196,46,0.08), transparent)",
+            "radial-gradient(ellipse 60% 50% at 20% 50%, rgba(201,144,47,0.12), transparent), radial-gradient(ellipse 50% 60% at 80% 50%, rgba(224,169,64,0.08), transparent)",
         }}
         aria-hidden
       />
@@ -46,7 +53,7 @@ export async function ContactCtaSection() {
             {t("inquiry")}
           </LinkButton>
           <a
-            href={getWhatsAppUrl(SITE_CONFIG.contact.whatsapp)}
+            href={getWhatsAppUrl(SITE_CONFIG.contact.whatsapp, waMessage)}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-pill-wa inline-flex h-12 items-center gap-2 rounded-full px-6 text-sm font-semibold tracking-wide text-pearl transition-all"

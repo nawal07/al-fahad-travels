@@ -22,7 +22,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  themeColor: "#2a2858",
+  themeColor: "#0d0c0a",
 };
 
 export default async function LocaleLayout({
@@ -36,14 +36,14 @@ export default async function LocaleLayout({
   }
 
   setRequestLocale(locale);
-  const messages = await getMessages();
+  const messages = await getMessages({ locale });
 
   return (
     <LocaleShell locale={locale as Locale}>
       <NextIntlClientProvider messages={messages}>
         <PageSeo />
         <div className="flex min-h-full flex-col">
-          <SiteChrome>{children}</SiteChrome>
+          <SiteChrome locale={locale as Locale}>{children}</SiteChrome>
         </div>
       </NextIntlClientProvider>
     </LocaleShell>

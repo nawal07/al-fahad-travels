@@ -1,13 +1,13 @@
-import Image from "next/image";
-import { getLocale, getTranslations } from "next-intl/server";
+﻿import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 import { MotionWrapper } from "@/components/animations/motion-wrapper";
 import { luxuryBanner } from "@/data/home-content";
 import type { Locale } from "@/constants/site";
 import { pickLocalized } from "@/lib/localized";
 
-export async function LuxuryBannerSection() {
-  const locale = (await getLocale()) as Locale;
-  const t = await getTranslations("home.luxury");
+export async function LuxuryBannerSection({ locale }: { locale: Locale }) {
+
+  const t = await getTranslations({ locale, namespace: "home.luxury" });
 
   return (
     <section className="relative min-h-[70vh] overflow-hidden" aria-labelledby="luxury-title">

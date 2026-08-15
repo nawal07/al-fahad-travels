@@ -1,5 +1,5 @@
-import type { ReactNode } from "react";
-import { getLocale, getTranslations } from "next-intl/server";
+﻿import type { ReactNode } from "react";
+import { getTranslations } from "next-intl/server";
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { MotionWrapper } from "@/components/animations/motion-wrapper";
 import { ContactForm } from "@/components/forms/contact-form";
@@ -12,12 +12,17 @@ import { pickLocalized } from "@/lib/localized";
 import { getWhatsAppUrl } from "@/lib/rtl";
 
 const MAP_EMBED =
-  "https://maps.google.com/maps?q=24.6108,46.6685&z=16&output=embed";
+  "https://maps.google.com/maps?q=Al+Izdihar,+Riyadh,+Saudi+Arabia&z=14&output=embed";
 
-export async function ContactPageContent() {
-  const locale = (await getLocale()) as Locale;
-  const t = await getTranslations("pages.contact");
+const WA_MESSAGE = {
+  en: "Hello! I'm interested in Al-Fahad Travels services. I'd like to enquire about your travel packages and itineraries. Could you please assist me?",
+  ar: "مرحباً، أود الاستفسار عن خدمات وباقات الفهد للسفر والسياحة. هل يمكنكم مساعدتي في التخطيط لرحلتي؟",
+};
+
+export async function ContactPageContent({ locale }: { locale: Locale }) {
+  const t = await getTranslations({ locale, namespace: "pages.contact" });
   const address = pickLocalized(SITE_CONFIG.contact.address, locale);
+  const waMessage = locale === "ar" ? WA_MESSAGE.ar : WA_MESSAGE.en;
 
   return (
     <>
@@ -77,7 +82,7 @@ export async function ContactPageContent() {
 
             <div className="mt-10 flex flex-wrap gap-3">
               <a
-                href={getWhatsAppUrl(SITE_CONFIG.contact.whatsapp)}
+                href={getWhatsAppUrl(SITE_CONFIG.contact.whatsapp, waMessage)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex h-12 min-h-12 items-center justify-center rounded-md bg-brand-green px-6 text-sm font-heading text-pearl touch-manipulation transition-opacity hover:opacity-90"

@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "title": "Zover International Travel & Tourism",
-    "description": "Premium travel and tourism services in Saudi Arabia since 2004. Flights, luxury stays, bespoke journeys, and seamless experiences aligned with Vision 2030."
+    "title": "Al-Fahad Travels",
+    "description": "Premium travel and tourism services in Saudi Arabia. Flights, luxury stays, bespoke journeys, and seamless experiences aligned with Vision 2030."
   },
   "common": {
-    "brandName": "Zover",
+    "brandName": "Al-Fahad Travels",
     "tagline": "We travel with you in every step",
     "cta": {
       "explore": "Explore Journeys",
@@ -33,20 +33,17 @@
     }
   },
   "footer": {
-    "tagline": "Your gateway to extraordinary travel experiences across Saudi Arabia and the world since 2004.",
+    "tagline": "Your gateway to extraordinary travel experiences across Saudi Arabia and the world.",
     "explore": "Explore",
     "more": "More",
     "contact": "Contact",
-    "follow": "Follow us",
-    "cr": "Commercial Registration",
-    "vat": "VAT Number",
     "rights": "All rights reserved.",
     "crafted": "Crafted for premium travel experiences."
   },
   "pages": {
     "about": {
       "eyebrow": "Our Story",
-      "title": "About Zover",
+      "title": "About Al-Fahad Travels",
       "description": "Leading travel and tourism in the Kingdom with innovation, quality, and a passion for exceptional journeys.",
       "teamEyebrow": "Our people",
       "teamTitle": "The team behind every journey",
@@ -74,9 +71,9 @@
       "title": "Our Partners & Clients",
       "description": "Strategic alliances with leading airlines, hotels, and organizations across the region.",
       "intro": "Our clients are a source of pride and a testament to our ability to deliver comprehensive travel services with professionalism and excellence.",
-      "logoNote": "Partner logos display automatically when image files are added to the partners folder.",
+      "logoNote": "",
       "ctaTitle": "Become a partner",
-      "ctaDescription": "Connect with Zover for corporate travel, events, and strategic collaboration.",
+      "ctaDescription": "Connect with Al-Fahad Travels for corporate travel, events, and strategic collaboration.",
       "cta": "Contact us"
     },
     "contact": {
@@ -98,8 +95,8 @@
     "blog": {
       "eyebrow": "Insights",
       "title": "Travel Blog",
-      "description": "Destination guides and luxury travel insights — powered by Sanity CMS in a future phase.",
-      "comingSoon": "Articles and destination guides are coming soon with CMS integration.",
+      "description": "Destination guides and luxury travel insights in the near future.",
+      "comingSoon": "Articles and destination guides are coming soon.",
       "cta": "Contact us meanwhile"
     },
     "inquiry": {
@@ -149,16 +146,16 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Premium Saudi Travel Since 2004",
+      "eyebrow": "Premium Saudi Travel",
       "titleBefore": "Extraordinary journeys,",
       "titleHighlight": "crafted",
       "titleAfter": "with precision",
-      "subtitle": "From private aviation to bespoke itineraries across the Kingdom and the world — Zover redefines what travel can be.",
+      "subtitle": "From private aviation to bespoke itineraries across the Kingdom and the world — Al-Fahad Travels redefines what travel can be.",
       "scroll": "Scroll",
       "explore": "Explore Journeys",
       "plan": "Plan Your Trip",
       "statDestinations": "Destinations",
-      "statYears": "Years of Excellence",
+      "statYears": "Always On Call",
       "statTravelers": "Happy Travelers",
       "statPartners": "Global Partners"
     },
@@ -181,9 +178,9 @@
       "cta": "View All Services"
     },
     "why": {
-      "eyebrow": "Why Zover",
+      "eyebrow": "Why Al-Fahad Travels",
       "title": "Strength that travels with you",
-      "description": "Established in Riyadh in 2004, Zover has been the trusted partner for thousands of travelers across the Gulf."
+      "description": "Based in Riyadh, Al-Fahad Travels is the trusted partner for travelers across the Kingdom and the Gulf."
     },
     "partners": {
       "eyebrow": "Trusted network",
@@ -192,7 +189,7 @@
       "cta": "See all partners"
     },
     "luxury": {
-      "eyebrow": "The Zover experience"
+      "eyebrow": "The Al-Fahad experience"
     },
     "testimonials": {
       "eyebrow": "Reviews",
@@ -201,7 +198,7 @@
     "gallery": {
       "eyebrow": "Gallery",
       "title": "Moments from the journey",
-      "description": "A glimpse of the experiences we craft — full gallery coming with CMS."
+      "description": "A glimpse of the experiences we craft."
     },
     "contactCta": {
       "eyebrow": "Begin your journey",

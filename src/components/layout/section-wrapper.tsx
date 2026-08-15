@@ -15,8 +15,8 @@ const variantStyles = {
   elevated: "bg-dark-elevated text-pearl",
   sand: "bg-dark-elevated text-pearl",
   gradient:
-    "bg-gradient-to-b from-dark via-[#0f0d1e] to-dark text-pearl",
-  cta: "bg-gradient-to-br from-purple-dark via-[#1a0d40] to-purple-dark text-pearl",
+    "bg-gradient-to-b from-dark via-[#100e0a] to-dark text-pearl",
+  cta: "bg-gradient-to-br from-purple-dark via-[#0a2e3d] to-purple-dark text-pearl",
 } as const;
 
 export function SectionWrapper({

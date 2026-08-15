@@ -1,24 +1,18 @@
 export const SITE_CONFIG = {
-  name: 'Zover International Travel & Tourism',
-  nameAr: 'زوفر العالمية للسفر والسياحة',
-  legalName: 'Zover International Travel and Tourism',
-  foundedYear: 2004,
+  name: 'Al-Fahad Travels',
+  nameAr: 'الفهد للسفر والسياحة',
+  legalName: 'Al-Fahad International Travel and Tourism',
   defaultLocale: 'en' as const,
   locales: ['en', 'ar'] as const,
-  baseUrl: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://zuvar.com.sa',
+  baseUrl: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://alfahhadtravel.com',
   contact: {
-    email: 'info@zuvar.com.sa',
-    phones: ['+966550534946'],
+    email: 'info@alfahhad.com.sa',
+    phones: ['+966112255558'],
     address: {
-      en: 'Al Madinah Al Munawwarah Road, Al Badeiah District, Riyadh, Saudi Arabia',
-      ar: 'طريق المدينة المنورة، حي البديعة، الرياض، المملكة العربية السعودية',
+      en: 'Al-Izdehar District, Exit 9, Riyadh, Saudi Arabia',
+      ar: 'حي الازدهار، مخرج 9، الرياض، المملكة العربية السعودية',
     },
-    whatsapp: '+966550534946',
-  },
-  social: {
-    instagram: '#',
-    linkedin: '#',
-    x: '#',
+    whatsapp: '+966112255558',
   },
 } as const;
 

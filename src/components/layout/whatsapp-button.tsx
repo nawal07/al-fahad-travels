@@ -14,8 +14,8 @@ export function WhatsAppButton({ className }: WhatsAppButtonProps) {
   const locale = useLocale() as Locale;
   const isRtl = locale === "ar";
   const enquiryMessage = isRtl
-    ? "مرحباً، أود الاستفسار عن خدمات وباقات زوفر للسفر والسياحة. هل يمكنكم مساعدتي في التخطيط لرحلتي؟"
-    : "Hello! I'm interested in Zover Travel & Tourism services. I'd like to enquire about your travel packages and itineraries. Could you please assist me?";
+    ? "مرحباً، أود الاستفسار عن خدمات وباقات الفهد للسفر والسياحة. هل يمكنكم مساعدتي في التخطيط لرحلتي؟"
+    : "Hello! I'm interested in Al-Fahad Travels services. I'd like to enquire about your travel packages and itineraries. Could you please assist me?";
   const url = getWhatsAppUrl(SITE_CONFIG.contact.whatsapp, enquiryMessage);
 
   return (

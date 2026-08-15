@@ -1,4 +1,4 @@
-import { getLocale, getTranslations } from "next-intl/server";
+﻿import { getTranslations } from "next-intl/server";
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
 import { SectionWrapper } from "@/components/layout/section-wrapper";
 import { SectionHeading } from "@/components/sections/section-heading";
@@ -6,9 +6,9 @@ import { homeStrengths } from "@/data/home-content";
 import type { Locale } from "@/constants/site";
 import { pickLocalized } from "@/lib/localized";
 
-export async function WhyChooseSection() {
-  const locale = (await getLocale()) as Locale;
-  const t = await getTranslations("home.why");
+export async function WhyChooseSection({ locale }: { locale: Locale }) {
+
+  const t = await getTranslations({ locale, namespace: "home.why" });
 
   return (
     <SectionWrapper variant="elevated" id="why-us">
