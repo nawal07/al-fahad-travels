@@ -23,7 +23,7 @@ export async function Footer({ locale }: { locale: Locale }) {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-5">
             <Link href={`/${locale}`} className="inline-block">
-              <BrandLogo variant="full" onDark />
+              <BrandLogo variant="official" onDark className="h-32 lg:h-36" />
             </Link>
             <p className="mt-5 max-w-xs text-[0.85rem] leading-[1.7] text-pearl/35">
               {footer("tagline")}

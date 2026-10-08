@@ -37,19 +37,19 @@ npm run start
 
 ## Routes
 
-| Path | Description |
-|------|-------------|
-| `/en`, `/ar` | Home |
-| `/{locale}/about` | About |
-| `/{locale}/services` | Services |
-| `/{locale}/partners` | Partners |
-| `/{locale}/contact` | Contact (+ form demo) |
-| `/{locale}/blog` | Blog stub (noindex) |
-| `/{locale}/inquiry` | Inquiry form (noindex) |
+| Path                 | Description            |
+| -------------------- | ---------------------- |
+| `/en`, `/ar`         | Home                   |
+| `/{locale}/about`    | About                  |
+| `/{locale}/services` | Services               |
+| `/{locale}/partners` | Partners               |
+| `/{locale}/contact`  | Contact (+ form demo)  |
+| `/{locale}/blog`     | Blog stub (noindex)    |
+| `/{locale}/inquiry`  | Inquiry form (noindex) |
 
 ## Brand assets
 
-Logo: text-based wordmark (`src/components/brand/brand-logo.tsx`) — swap for a real logo file when available. Home hero photo: `public/brand/home.jpg`. Partner placeholders: `public/partners/` (see `README.md` there).
+Logo: text-based wordmark (`src/components/brand/brand-logo.tsx`) — swap for a real logo file when available. Home hero photo: `public/brand/home.png`. Partner placeholders: `public/partners/` (see `README.md` there).
 
 ## Next phases
 

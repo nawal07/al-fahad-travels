@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { Locale } from "@/constants/site";
+import { IMAGES } from "@/constants/images";
 import { SITE_CONFIG } from "@/constants/site";
 import type { SEOContent } from "@/types/content";
 
@@ -36,7 +37,7 @@ export function buildPageMetadata({
       siteName: SITE_CONFIG.name,
       locale: locale === "ar" ? "ar_SA" : "en_US",
       type: "website",
-      ...(seo.ogImage ? { images: [{ url: seo.ogImage }] } : {}),
+      images: [{ url: seo.ogImage ?? IMAGES.brand.logo }],
     },
     twitter: {
       card: "summary_large_image",

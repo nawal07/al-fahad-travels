@@ -93,8 +93,8 @@ export function Navbar() {
             className="group shrink-0 transition-all duration-500 hover:opacity-90"
             aria-label={t("brandName")}
           >
-            <BrandLogo variant="full" onDark={!glass} size={glass ? "sm" : "default"} className="hidden lg:block" />
-            <BrandLogo variant="full" onDark={!glass} size="sm" className="hidden sm:block lg:hidden" />
+            <BrandLogo variant="full" size={glass ? "sm" : "default"} className="hidden lg:inline-flex" />
+            <BrandLogo variant="full" size="sm" className="hidden sm:inline-flex lg:hidden" />
             <BrandLogo variant="icon" className="sm:hidden" />
           </Link>
 
