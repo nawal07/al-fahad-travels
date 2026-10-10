@@ -23,19 +23,22 @@ export function PartnerLogoCard({ partner }: PartnerLogoCardProps) {
   return (
     <div
       className={cn(
-        "flex h-24 items-center justify-center rounded-xl border border-border bg-card p-4 sm:h-28 sm:p-6",
+        "flex h-24 items-center justify-center rounded-xl border border-border bg-card p-3 sm:h-28 sm:p-4",
         "transition-all duration-300 hover:border-gold/40 hover:shadow-soft",
       )}
     >
       {showLogo ? (
-        <Image
-          src={partner.logo!}
-          alt={partner.name}
-          width={140}
-          height={56}
-          className="max-h-14 w-auto object-contain opacity-90 grayscale transition-all duration-300 hover:grayscale-0"
-          onError={() => setImgError(true)}
-        />
+        // Light plate keeps dark brand logos (Marriott, Hilton, Qatar) legible on the dark theme
+        <div className="flex size-full items-center justify-center rounded-lg bg-pearl px-4 py-2">
+          <Image
+            src={partner.logo!}
+            alt={partner.name}
+            width={160}
+            height={64}
+            className="max-h-full w-auto max-w-full object-contain transition-transform duration-300 hover:scale-105"
+            onError={() => setImgError(true)}
+          />
+        </div>
       ) : (
         <div className="flex flex-col items-center gap-2 text-center">
           <span

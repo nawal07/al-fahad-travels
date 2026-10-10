@@ -4,17 +4,17 @@ Add logo files here using the filenames defined in `src/data/partners-content.ts
 
 | File | Partner |
 |------|---------|
-| `saudia.png` | Saudia |
-| `emirates.png` | Emirates |
-| `qatar.png` | Qatar Airways |
-| `etihad.png` | Etihad |
-| `marriott.png` | Marriott |
-| `hilton.png` | Hilton |
-| `accor.png` | Accor |
-| `hyatt.png` | Hyatt |
-| `tourism.png` | Ministry of Tourism |
-| `neom.png` | NEOM |
-| `aramco.png` | Aramco |
-| `stc.png` | stc |
+| `saudia.svg` | Saudia |
+| `emirates.svg` | Emirates |
+| `qatar.svg` | Qatar Airways |
+| `etihad.svg` | Etihad |
+| `marriott.svg` | Marriott |
+| `hilton.svg` | Hilton |
+| `accor.svg` | Accor |
+| `hyatt.svg` | Hyatt |
+| `tourism.svg` | Ministry of Tourism |
+| `neom.svg` | NEOM |
+| `aramco.svg` | Aramco |
+| `stc.svg` | stc |
 
-Recommended: PNG with transparent background, ~280×80px. Until added, the site shows initials placeholders.
+Logos are the official SVGs from Wikimedia Commons, shown in full color on a light plate. If a file is missing, the site falls back to an initials placeholder.
